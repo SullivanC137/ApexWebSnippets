@@ -21,7 +21,18 @@ function(config) {
  
  data-lnd_code=#COUNTRY# data-btwcodeid=#VAT# data-rowno=#ROWNO#
  
+// Make use of datarow class to set item values
+$s("P7010_VKP_SELECTED_PRL_ID",$('#report_vkp_prices_report').find('td[headers="BUSINESS_UNIT"]:first').find("span").data('prl_id'));
+$s("P7010_VKP_SELECTED_LND_CODE",$('#report_vkp_prices_report').find('td[headers="BUSINESS_UNIT"]:first').find("span").data('fld_lnd_code'));
+//Mark first row as selected
+$('#report_vkp_prices_report').find('tr.selected').removeClass('selected');
+$('#report_vkp_prices_report').find('td[headers="BUSINESS_UNIT"]:first').closest("tr").addClass('selected');
 
+// change region titles of #report_selling_price_report and selling_price_report 
+$('#recom_price_report h2').text("Recommended Price of " + $(this.triggeringElement).parent().find('td[headers="BUSINESS_UNIT"]').find("span").data('fld_lnd_code'));
+$('#selling_price_report h2').text("Retail Prices of " + $(this.triggeringElement).parent().find('td[headers="BUSINESS_UNIT"]:first').find("span").text());
+
+                       
 // On click mark selected: jQuery selector: #report_hee_report > > > > tbody > > td
 
  //$s("P7010_HEE_SELECTED", $(this.triggeringElement).parent().children("td:first").text());
