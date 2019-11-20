@@ -67,4 +67,6 @@ apex.message.showErrors([
     }
 ]);
 
-                       
+//add/remove disabled attribute to button
+$('#saveBtnSAVE').attr('disabled','disabled');
+$('#saveBtnSAVE').removeAttr('disabled');
