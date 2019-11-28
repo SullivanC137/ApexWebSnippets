@@ -70,3 +70,7 @@ apex.message.showErrors([
 //add/remove disabled attribute to button
 $('#saveBtnSAVE').attr('disabled','disabled');
 $('#saveBtnSAVE').removeAttr('disabled');
+
+//make a region sticky (unsupported/undocumented)
+// on page load run:
+$("#stickyRegionsStaticID").stickyWidget({toggleWidth:true});
