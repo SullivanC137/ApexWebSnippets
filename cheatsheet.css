@@ -1,0 +1,4 @@
+/* show pointer on report row */
+#regionStaticId tbody tr { 
+    cursor: pointer; 
+}
