@@ -2,3 +2,26 @@
 #regionStaticId tbody tr { 
     cursor: pointer; 
 }
+
+
+/* floating button, usefull for mobile */
+.float{
+  z-index:100;
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color: rgba(55, 76, 139, 0.81);
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+  margin-top:22px;
+}
+/* add to your button properties css attributes: float my float
+source: https://apex18.blogspot.com/2019/11/oracle-apex-universal-theme-floating-buttons.html
+*/
