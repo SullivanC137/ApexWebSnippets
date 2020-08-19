@@ -74,3 +74,7 @@ $('#saveBtnSAVE').removeAttr('disabled');
 //make a region sticky (unsupported/undocumented)
 // on page load run:
 $("#stickyRegionsStaticID").stickyWidget({toggleWidth:true});
+
+
+//get length of input item (text field)
+$('#P7013_INHOUD_CE').val().length;
