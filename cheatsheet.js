@@ -75,6 +75,9 @@ $('#saveBtnSAVE').removeAttr('disabled');
 // on page load run:
 $("#stickyRegionsStaticID").stickyWidget({toggleWidth:true});
 
-
 //get length of input item (text field)
 $('#P7013_INHOUD_CE').val().length;
+
+//jQuery selector example:
+// find all input items in Region with static id = search
+$('div#search input');
