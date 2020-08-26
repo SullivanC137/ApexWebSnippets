@@ -81,3 +81,7 @@ $('#P7013_INHOUD_CE').val().length;
 //jQuery selector example:
 // find all input items in Region with static id = search
 $('div#search input');
+
+//Apex 20.1: Text Field with Autocomplete
+// item = P4_SEARCH_TEXT_FIELD
+$('oj-inputsearch-input-P4_SEARCH_TEXT_FIELD_HIDDEN').val'some text');
