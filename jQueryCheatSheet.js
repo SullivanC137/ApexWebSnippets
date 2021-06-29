@@ -53,4 +53,4 @@ $('div#search input');
 
 //Apex 20.1: Text Field with Autocomplete
 // item = P4_SEARCH_TEXT_FIELD
-$('oj-inputsearch-input-P4_SEARCH_TEXT_FIELD_HIDDEN').val'some text');
+$('oj-inputsearch-input-P4_SEARCH_TEXT_FIELD_HIDDEN').val('some text');
