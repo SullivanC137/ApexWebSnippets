@@ -1,3 +1,6 @@
+// Cheatsheet for often used jQuery functions and selectors
+// TODO: cleanup and order
+
 $('#report_vkp_prices_report').find('tr.selected')[1] //Johannes says its the second element!!
 // add classes to a row report and then 
 // data-aos_type=#AOS_TYPE# data-tal_code=#TAL_CODE# data-omschrijving=#OMSCHRIJVING# data-rowno=#ROWNO#
@@ -54,3 +57,21 @@ $('div#search input');
 //Apex 20.1: Text Field with Autocomplete
 // item = P4_SEARCH_TEXT_FIELD
 $('oj-inputsearch-input-P4_SEARCH_TEXT_FIELD_HIDDEN').val('some text');
+
+                       
+// Make use of datarow class to set item values
+$s("P7010_VKP_SELECTED_PRL_ID", $('#report_vkp_prices_report').find('td[headers="BUSINESS_UNIT"]:first').find("span").data('prl_id'));
+$s("P7010_VKP_SELECTED_LND_CODE",$('#report_vkp_prices_report').find('td[headers="BUSINESS_UNIT"]:first').find("span").data('fld_lnd_code'));
+
+// --> after refresh of report
+// Set selected item
+$s("P7010_HEE_SELECTED", $(this.triggeringElement).find("td:first").text());
+
+// NEW code make use of datarow class to set item values
+$s("P7010_VKP_SELECTED_PRL_ID",$('#report_vkp_prices_report').find('td[headers="BUSINESS_UNIT"]:first').find("span").data('prl_id'));
+$s("P7010_VKP_SELECTED_LND_CODE",$('#report_vkp_prices_report').find('td[headers="BUSINESS_UNIT"]:first').find("span").data('fld_lnd_code'));
+//old, working code to set values:
+//$s("P7010_VKP_SELECTED_PRL_ID", $(this.triggeringElement).find('td[headers="PRL_ID"]:first').text());
+//$s("P7010_VKP_SELECTED_LND_CODE", $(this.triggeringElement).find('td[headers="FLD_LND_CODE"]:first').text());
+//---------
+
