@@ -1,7 +1,11 @@
 // pure Javascript or APEX JS api's
 
 //submit via javascript in a URL
-javascript: doSubmit({   request:"DELETE",   set:{"P1_DEPTNO":10, "P1_EMPNO":5433});
+javascript: doSubmit({   request:"DELETE",   set:{"P1_DEPTNO":10, "P1_EMPNO":5433}})
+
+// close/open inline modal region with link in URL:
+javascript:closeModal('region_static_id')
+javascript:openModal('region_static_id')
 
 //return a translateable text message
 apex.lang.getMessage( "SOME_KIND_OF_MESSAGE");
