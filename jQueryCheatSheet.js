@@ -75,3 +75,15 @@ $s("P7010_VKP_SELECTED_LND_CODE",$('#report_vkp_prices_report').find('td[headers
 //$s("P7010_VKP_SELECTED_LND_CODE", $(this.triggeringElement).find('td[headers="FLD_LND_CODE"]:first').text());
 //---------
 
+// Get HEE_ID selected by user
+let lHEE_Selected = $(this.triggeringElement).parent().find('td[headers="ID"]').text();
+$s("P7010_HEE_SELECTED", lHEE_Selected);
+apex.debug.log('On Click HEE Row, HEE Selected ',lHEE_Selected);
+
+// Mark selected parent row
+$('#hee_report').find('tr.selected').removeClass('selected');
+$(this.triggeringElement).closest('tr').addClass('selected');
+
+
+
+
