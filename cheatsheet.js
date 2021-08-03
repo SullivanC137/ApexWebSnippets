@@ -29,6 +29,13 @@ apex.message.showErrors([
 //open an inline dialog Modal region with javascript:
 openModal('region_static_id');
 
+// set interactive grid into edit mode
+apex.region("ig_static_id").call("getActions").set("edit", true);
+
+// hide the interactive grid edit button
+apex.region("ig_static_id").call("getActions").hide("edit");
+
+
 // -----------------------------------------------------------------------------------------------------
 //   _           _                                  _     _                                   _       _ 
 //  (_)  _ __   | |_    ___   _ __    __ _    ___  | |_  (_) __   __   ___      __ _   _ __  (_)   __| |
