@@ -84,6 +84,7 @@ apex.debug.log('On Click HEE Row, HEE Selected ',lHEE_Selected);
 $('#hee_report').find('tr.selected').removeClass('selected');
 $(this.triggeringElement).closest('tr').addClass('selected');
 
-
+//Search for specific data attribute
+$('#report_purchase_price_report [data-ingangsdatum="15-08-2020"] .delete-ikp');
 
 
