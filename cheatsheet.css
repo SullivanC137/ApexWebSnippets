@@ -3,6 +3,23 @@
     cursor: pointer; 
 }
 
+/* sticky headers and columns */
+.header-sticky
+{
+position: sticky;
+top: 0px !important;
+}
+
+.col-1-sticky
+{
+position: sticky;
+left: 0px !important;
+}
+
+/* selected class to show which cell is selected */
+td.selected {
+    border: 2px solid #2b6bc1 !important;
+}
 
 /* floating button, usefull for mobile */
 .float{
