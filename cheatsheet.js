@@ -35,6 +35,9 @@ apex.region("ig_static_id").call("getActions").set("edit", true);
 // hide the interactive grid edit button
 apex.region("ig_static_id").call("getActions").hide("edit");
 
+// navigate using a DA/javascript
+apex.navigation.redirect ( "f?p=&APP_ID.:9450:&APP_SESSION.:::::" );
+
 
 // -----------------------------------------------------------------------------------------------------
 //   _           _                                  _     _                                   _       _ 
