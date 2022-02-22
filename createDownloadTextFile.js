@@ -1,4 +1,9 @@
 //script creates a text file and downloads it
+/*
+____ _  _ ____ ___  ____ _  _ ____ ____ ____ ___ ____ _ _    
+|__| |\/| |__|   /  |  | |\ | |___ |__/ |___  |  |__| | |    
+|  | |  | |  |  /__ |__| | \| |___ |  \ |___  |  |  | | |___ 
+*/
 // for example from https://amazoneretail.com/product-category/melkproducten/
 
 //function to download file
@@ -24,3 +29,35 @@ products.each(function(){
 })
 
 download(filename,file_contents);
+// ----------------------------------------------------------------------------- //
+/*
+_  _ ____ _  _ _ ___  _  _ ____ ___ 
+|_/  |__/ |  | | |  \ |  | |__|  |  
+| \_ |  \ |__| | |__/  \/  |  |  |  
+*/
+// for example from https://www.kruidvat.nl/elektronica-media/telefonie/c/20089
+function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+}
+var filename = window.location.href.replace(/[^a-zA-Z0-9]/g,'_');
+var file_contents = '\r';
+var products = document.getElementsByClassName('tile__product-slide swiper-slide');
+for (let product of products){
+    file_contents = file_contents + '\r' +
+            product.getElementsByClassName('tile__product-slide-product-name')[0].outerText                 // name
+    +' ; '+ product.getElementsByClassName('tile__product-slide-product-description')[0].outerText          // description
+    +' ; '+ product.getElementsByClassName('pricebadge__old-price-wrapper')[0].outerText.replace(/\n/g,'')  // old price
+    +' ; '+ product.getElementsByClassName('pricebadge__new-price-wrapper ')[0].outerText.replace(/\n/g,'') // new price
+    +' ; '+ product.getElementsByClassName('tile__product-slide-image lazyloaded')[0].src                   // picture
+    ;
+    }
+
+    download(filename,file_contents);
+
+// ----------------------------------------------------------------------------- //
