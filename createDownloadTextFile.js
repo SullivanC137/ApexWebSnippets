@@ -49,12 +49,33 @@ var filename = window.location.href.replace(/[^a-zA-Z0-9]/g,'_');
 var file_contents = '\r';
 var products = document.getElementsByClassName('tile__product-slide swiper-slide');
 for (let product of products){
-    file_contents = file_contents + '\r' +
-            product.getElementsByClassName('tile__product-slide-product-name')[0].outerText                 // name
-    +' ; '+ product.getElementsByClassName('tile__product-slide-product-description')[0].outerText          // description
-    +' ; '+ product.getElementsByClassName('pricebadge__old-price-wrapper')[0].outerText.replace(/\n/g,'')  // old price
-    +' ; '+ product.getElementsByClassName('pricebadge__new-price-wrapper ')[0].outerText.replace(/\n/g,'') // new price
-    +' ; '+ product.getElementsByClassName('tile__product-slide-image lazyloaded')[0].src                   // picture
+    let name,
+        description,
+        oldPrice,
+        newPrice,
+        picture;
+    name        = product.getElementsByClassName('tile__product-slide-product-name')[0].outerText;
+    description = product.getElementsByClassName('tile__product-slide-product-description')[0].outerText;
+    if (product.getElementsByClassName('pricebadge__old-price-wrapper')[0] === undefined){
+        oldPrice = '';  // no old price
+    } else {
+        oldPrice    = product.getElementsByClassName('pricebadge__old-price-wrapper')[0].outerText.replace(/\n/g,'');
+    }
+    if (product.getElementsByClassName('pricebadge__new-price-wrapper ')[0] === undefined){
+        newPrice = '';  // no new price
+    } else {
+        newPrice    = product.getElementsByClassName('pricebadge__new-price-wrapper ')[0].outerText.replace(/\n/g,'');
+    }
+    if (product.getElementsByClassName('tile__product-slide-image lazyloaded')[0] === undefined){
+        picture = ''; // no picture
+    } else {
+        picture     = product.getElementsByClassName('tile__product-slide-image lazyloaded')[0].src;
+    }
+    file_contents = file_contents + '\r' + name
+                                   +' ; '+ description
+                                   +' ; '+ oldPrice
+                                   +' ; '+ newPrice
+                                   +' ; '+ picture
     ;
     }
 
