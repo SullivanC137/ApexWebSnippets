@@ -1,5 +1,13 @@
-// Cheatsheet for often used jQuery functions and selectors
+x// Cheatsheet for often used jQuery functions and selectors
 // TODO: cleanup and order
+
+// jQuery selectors: https://www.w3schools.com/jquery/jquery_ref_selectors.asp
+
+//add apex wait overlay
+apex.widget.waitPopup();
+//remove it
+$("#apex_wait_overlay").remove();
+$(".u-Processing").remove();
 
 $('#report_vkp_prices_report').find('tr.selected')[1] //Johannes says its the second element!!
 // add classes to a row report and then 
@@ -16,7 +24,6 @@ $('#report_vkp_prices_report').find('td[headers="BUSINESS_UNIT"]:first').closest
 // change region titles of #report_selling_price_report and selling_price_report 
 $('#recom_price_report h2').text("Recommended Price of " + $(this.triggeringElement).parent().find('td[headers="BUSINESS_UNIT"]').find("span").data('fld_lnd_code'));
 $('#selling_price_report h2').text("Retail Prices of " + $(this.triggeringElement).parent().find('td[headers="BUSINESS_UNIT"]:first').find("span").text());
-
                        
 // On click mark selected: jQuery selector: #report_hee_report > > > > tbody > > td
 $s("P7010_HEE_SELECTED", $(this.triggeringElement).parent().children("td:first").text());
@@ -86,5 +93,4 @@ $(this.triggeringElement).closest('tr').addClass('selected');
 
 //Search for specific data attribute
 $('#report_purchase_price_report [data-ingangsdatum="15-08-2020"] .delete-ikp');
-
 
