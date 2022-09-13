@@ -3,11 +3,8 @@ x// Cheatsheet for often used jQuery functions and selectors
 
 // jQuery selectors: https://www.w3schools.com/jquery/jquery_ref_selectors.asp
 
-//add apex wait overlay
-apex.widget.waitPopup();
-//remove it
-$("#apex_wait_overlay").remove();
-$(".u-Processing").remove();
+// root font size was different after upgrading APEX. This sets the font size to 9px, only if it is 16
+if($('html').css("font-size")==='16px'){$('html').css("font-size","9px");}
 
 $('#report_vkp_prices_report').find('tr.selected')[1] //Johannes says its the second element!!
 // add classes to a row report and then 
