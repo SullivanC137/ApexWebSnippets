@@ -5,6 +5,14 @@
 //  /_/   \_\ |_|     |_____| /_/\_\    \__,_| | .__/  |_|     |___/
 //                                             |_|                  
 
+
+//add apex wait overlay
+apex.widget.waitPopup();
+//remove it
+$("#apex_wait_overlay").remove();
+$(".u-Processing").remove();
+
+
 //submit via javascript in a URL
 javascript: doSubmit({   request:"DELETE",   set:{"P1_DEPTNO":10, "P1_EMPNO":5433}})
 
