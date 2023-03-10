@@ -38,10 +38,14 @@ $('#report_hee_report').find('tbody tr:first-of-type').addClass('selected');
 $('#report_vkp_prices_report').find('tr.selected').removeClass('selected');
 $('#report_vkp_prices_report').find('td[headers="BUSINESS_UNIT"]:first').closest("tr").addClass('selected');
 
-/* Old, working code to mark first row 
-   Report static id = vkp_prices_report */
+/* Old, working code to mark first row Report static id = vkp_prices_report */
 //$('#report_vkp_prices_report').find('tr.selected').removeClass('selected');
 //$('#report_vkp_prices_report').find('tbody tr:first-of-type').addClass('selected');
+
+// Mark HEE Row in report as selected (user has searched for this row)
+apex.jQuery('#report_hee_report tbody tr').removeClass('selected');
+let x = apex.jQuery('#report_hee_report td[headers="ID"]:contains('+apex.item('P7010_SEARCH_HEE_ID').getValue()+')');
+apex.jQuery(x).closest('tr').addClass('selected');
 
 //add/remove disabled attribute to button
 $('#saveBtnSAVE').attr('disabled','disabled');
