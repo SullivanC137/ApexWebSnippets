@@ -17,3 +17,14 @@ autocomplete="off"
 
 <!-- add horizontal and vertical scrollbar || add in header of classic report -->
 <div style ="overflow-x: scroll;overflow-y: scroll;height:500px;">
+
+<!-- use template directives in column html expression -->
+<table>
+   {if AKTE_NUMMER/}
+   <tr><td>Aktenummer:</td><td>&AKTE_NUMMER.</td></tr>
+   {endif/}
+   
+   {if EINDDATUM_AKTE/}
+   <tr><td>Einddatum:</td><td>&EINDDATUM_AKTE.</td></tr>
+   {endif/}
+</table>
