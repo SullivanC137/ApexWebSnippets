@@ -20,6 +20,7 @@ De benodigde bestanden komen uit twee specifieke mappen in de CodeMirror 5 distr
 Uit de lib map:
 - lib/codemirror.js
 - lib/codemirror.css
+  
 Uit de mode/xml map:
 - mode/xml/xml.js
 
