@@ -29,17 +29,17 @@ Controleer codemirror.js vooraf. Als het bestand import statements bevat, is het
 
 Ga in Oracle APEX naar Shared Components → Static Application Files.
 Upload de volgende bestanden, bij voorkeur in een codemirror map en niet in de root:
-codemirror.js
-codemirror.css
-xml.js
+- codemirror.js
+- codemirror.css
+- xml.js
 
 Bestanden laden op de pagina
 Onder Page → JavaScript → File URLs:
-#APP_FILES#codemirror/codemirror.js
-#APP_FILES#codemirror/xml.js
+- #APP_FILES#codemirror/codemirror.js
+- #APP_FILES#codemirror/xml.js
 
 Onder Page → CSS → File URLs:
-#APP_FILES#codemirror/codemirror.css
+- #APP_FILES#codemirror/codemirror.css
 
 ## Textarea configuratie ##
 Gebruik een standaard APEX Textarea item.
