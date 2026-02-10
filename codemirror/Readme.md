@@ -90,5 +90,6 @@ Deze aanpak is geschikt voor:
 - logging en technische admin-schermen
 - read-only viewers in pagina’s en dialogs
 
-CodeMirror is open source en beschikbaar onder de MIT-licentie.
-Officiële documentatie en downloads zijn te vinden op https://codemirror.net/5/
+CodeMirror is open source en beschikbaar onder de MIT-licentie. Officiële documentatie en downloads zijn te vinden op https://codemirror.net/5/. Deze repo bevat ook versie 5.65.20
+
+
